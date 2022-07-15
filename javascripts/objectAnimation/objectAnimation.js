@@ -37,12 +37,11 @@ let audience;
 
 //////////////////////////////Called Once at the Start//////////////////////////////
 function setup() {
-  createCanvas(600, 600, WEBGL);
-
+  var canvas = createCanvas(700, 700, WEBGL);
+  canvas.parent('sketch-holder');
   let fov = 60.0;  // 60 degrees FOV
   perspective(PI * fov / 180.0, width / height, 0.1, 2000);
 }
-
 
 //////////////////////////////This is Called Repeatedly to Draw New Per-frame Images//////////////////////////////
 function draw() {
@@ -57,7 +56,7 @@ function draw() {
   ambientLight(100, 100, 100);
 
   // set light position
-  //pointLight(255, 255, 255, 100, -100, 300);
+  pointLight(100, 100, 100, 100, -100, 300);
 
   // set the virtual camera position
   camera(fromX, fromY, fromZ, atX, atY, atZ, upX, upY, upZ);
