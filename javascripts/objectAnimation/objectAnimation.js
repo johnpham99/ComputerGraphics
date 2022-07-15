@@ -543,6 +543,3 @@ function drawFloor() {
   plane(3000, 3000);
   pop();
 }
-
-
-
