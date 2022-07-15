@@ -26,8 +26,8 @@ function preload() {
 
 // called once at the start of the program
 function setup() {
-  createCanvas(600, 600, WEBGL);
-
+  var canvas = createCanvas(600, 600, WEBGL);
+  canvas.parent('sketch-holder');
   let fov = 60.0;  // 60 degrees field of view
   perspective(PI * fov / 180.0, width / height, 0.1, 2000);
 }
